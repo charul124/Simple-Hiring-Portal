@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -11,6 +11,22 @@ import { useEffect, useState } from 'react';
 function App() {
   const [jobs, setJobs] = useState([]);
   const [customSearch, setCustomSeach] = useState(false);
+
+  constructor(props) {
+    super(props);
+    this.state = {
+    }
+  }
+  ComponentDidMount(){
+    const messaging = firebase.messaging()
+    messaging.requestPermission().then(()=>{
+      return messaging.getToken()
+    }).then(token=>{
+      console.log('Token : ',token)
+    }).catch(()=>{
+      console.log('error');
+    })
+  }
 
   const fetchJobs = async() => {
     setCustomSeach(false);
