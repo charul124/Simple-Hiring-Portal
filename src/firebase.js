@@ -16,7 +16,7 @@ const firebaseConfig = {
  const messaging = getMessaging();
 
  export const requestForToken = () =>{
-  return getToken(messaging, { vapidKey: "BIsApj6pq6jUSVnyWh241ulhCRuUUpOSb5nOKmN1HnknQS0yt_E7PUl99JjQmO6sacT4wqY23fiISR64ydIwsqo" }).then((currentToken) => {
+  return getToken(messaging, { vapidKey: "BJ4_TYZ9aLuXE4YZxgESgKKxu9FoOCs-4TxEcu4Rg-4i4x7GOLKsec2_P9z8xZmPFMVCZGRo-dJXMhp4o1eZHjU" }).then((currentToken) => {
     if (currentToken) {
       console.log("Token client: ", currentToken);
     } else {
@@ -36,27 +36,3 @@ export const onMessageListener = ()=>{
     });
   });
 } 
-
-
-// function requestPermission() {
-//   console.log("Requesting permission...");
-//   Notification.requestPermission().then((permission) => {
-//     if (permission === "granted") {
-//       console.log("Notification permission granted.");
-//       const messaging = getMessaging(app);
-//       getToken(messaging, {
-//         vapidKey:
-//           "BIsApj6pq6jUSVnyWh241ulhCRuUUpOSb5nOKmN1HnknQS0yt_E7PUl99JjQmO6sacT4wqY23fiISR64ydIwsqo",
-//       }).then((currentToken) => {
-//         if (currentToken) {
-//           console.log("currentToken: ", currentToken);
-//         } else {
-//           console.log("can not get token");
-//         }
-//       });
-//     } else {
-//       console.log("Unable to get permission to notify.");
-//     }
-//   });
-// }
-// requestPermission();
