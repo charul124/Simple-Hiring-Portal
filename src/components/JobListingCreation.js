@@ -135,11 +135,6 @@ const handleChange = (e) => {
         <input className='w-72 h-9 ml-3 border border-gray-400 rounded-md' type="text" name="skills" value={jobDetails.skills.join(',')} onChange={handleSkillsChange} required />
         </div>
 
-        {/* <div className='colspan-2 p-4'>
-        <label>Job Link: </label>
-        <input className='h-9 w-80 ml-3 border border-gray-400 rounded-md' type="text" name="jobLink" value={jobDetails.jobLink} onChange={handleChange} required />
-        </div> */}
-
         <div className='colspan-2 p-4'>
         <label>Job Link: </label>
         <input type="url" className='h-9 w-80 ml-3 border border-gray-400 rounded-md' name="jobLink" value={jobDetails.jobLink} onChange={handleChange} required />

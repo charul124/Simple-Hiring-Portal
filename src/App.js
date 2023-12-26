@@ -15,9 +15,9 @@ function App() {
       <Route path="/" element={<Navbar />} />
       <Route index element={<Home/>}/>
       <Route path='/joblistingcreation' element={<JobListingCreation db={db}/>} />
+      <Route path='/Notification' element={<Notification/>} />
       </Routes>
     </Router>
-    <Notification/>
     </>
     
   );
